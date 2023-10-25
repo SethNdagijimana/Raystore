@@ -1,2 +1,2 @@
-export { default as Cards } from "./Cards"
-export { default as ImageCard } from "./ImageCard"
+export { default as ProductCard } from "./ProductCard"
+export { default as ProductList } from "./ProductList"

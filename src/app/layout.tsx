@@ -1,3 +1,5 @@
+import { Navbar } from "@/components/Navbar"
+import { cn } from "@/lib/utils"
 import type { Metadata } from "next"
 import { Bricolage_Grotesque, Inter } from "next/font/google"
 import "../styles/globals.scss"
@@ -21,7 +23,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={(inter.className, bricolage.variable)}>
+      <body className={cn(inter.className, bricolage.variable, "bg-[#EEEEE7]")}>
+        <Navbar />
+
         <main>{children}</main>
       </body>
     </html>
