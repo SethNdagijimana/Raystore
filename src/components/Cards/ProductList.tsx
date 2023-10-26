@@ -4,7 +4,7 @@ import ProductCard from "./ProductCard"
 
 const ProductList = () => {
   return (
-    <div className="grid grid-cols-4 gap-2 p-8 w-full">
+    <div className="grid md:grid-cols-4 grid-cols-2 md:gap-2 md:p-8 md:w-full container p-4 gap-1">
       <ProductCard
         image="/store1.webp"
         name="Italian Moleskine - Straight cut"

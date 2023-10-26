@@ -1,8 +1,10 @@
+import { RayStore } from "../icon"
+
 const Contact = () => {
   return (
     <div className="bg-[#849591]">
-      <div className="flex items-center justify-center gap-8 [&_div]:mt-20">
-        <div className="text-center max-w-[200px] text-white [&_p]:font-light [&_p]:text-[11px]">
+      <div className="flex items-center justify-center md:gap-8 [&_div]:mt-20 flex-col md:flex-row">
+        <div className="text-center md:max-w-[200px] text-white [&_p]:font-light [&_p]:text-[11px]">
           <span className="flex items-center justify-center mb-1">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -18,7 +20,7 @@ const Contact = () => {
           <p className="text-sm mt-1">For any order over 350k of purchase.</p>
         </div>
 
-        <div className="text-center max-w-[200px] text-white [&_p]:font-light [&_p]:text-[11px]">
+        <div className="text-center md:max-w-[200px] max-w-[150px] text-white [&_p]:font-light [&_p]:text-[11px]">
           <span className="flex items-center justify-center mb-1">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -37,7 +39,7 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="text-center max-w-[200px] text-white [&_p]:font-light [&_p]:text-[11px]">
+        <div className="text-center md:max-w-[200px] max-w-[180px] text-white [&_p]:font-light [&_p]:text-[11px]">
           <span className="flex items-center justify-center mb-1">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -56,8 +58,8 @@ const Contact = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-7 gap-8 mt-16 p-16">
-        <div className="col-span-3">
+      <div className="grid md:grid-cols-7 gap-8 md:mt-16 p-16 place-content-center">
+        <div className="hidden md:flex col-span-3">
           <h2 className="text-white font-bricolage text-[32px]">
             SINCE 2016, RayStore IS BASED ON A SIMPLE IDEA: CREATE A WARDROBE
             THAT IS ACCESSIBLE, CHIC AND SPORTSWEAR, CASUAL AND URBAN,
@@ -67,14 +69,15 @@ const Contact = () => {
 
         <div className="[&_p]:text-[11px] [&_p]:text-[#fefbf5] [&_p]:font-light">
           <h2 className="text-[#fefbf5] text-base mb-1">DISCOVER US</h2>
-          <p>Chic Mall ground floor zero Do20_4</p>
+          <p>Chic Mall ground floor zero</p>
+          <p>Door number Do20_4</p>
           <p>A colorful and singular wardrobe</p>
           <p>A responsible model</p>
-          <p>A family story since 2016</p>
+          <p>Women story since 2016</p>
         </div>
 
         <div className="[&_p]:text-[11px] [&_p]:text-[#fefbf5] [&_p]:font-light">
-          <h2 className="text-[#fefbf5] text-base mb-1">
+          <h2 className="text-[#fefbf5] md:text-base text-sm mb-1">
             SPRING / SUMMER 2023
           </h2>
           <p>All Products</p>
@@ -107,7 +110,10 @@ const Contact = () => {
       </div>
 
       <div className="flex items-center justify-center p-2 mt-8">
-        <h2 className="text-[#fefbf5]">RayStore</h2>
+        <h2 className="hidden md:flex text-[#fefbf5] font-bricolage text-sm">
+          RayStore
+        </h2>
+        <RayStore />
       </div>
     </div>
   )
