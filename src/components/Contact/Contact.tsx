@@ -67,10 +67,10 @@ const Contact = () => {
 
         <div className="[&_p]:text-[11px] [&_p]:text-[#fefbf5] [&_p]:font-light">
           <h2 className="text-[#fefbf5] text-base mb-1">DISCOVER US</h2>
-          <p>La Maison Lafaurie</p>
+          <p>Chic Mall ground floor zero Do20_4</p>
           <p>A colorful and singular wardrobe</p>
           <p>A responsible model</p>
-          <p>A family story since 1991</p>
+          <p>A family story since 2016</p>
         </div>
 
         <div className="[&_p]:text-[11px] [&_p]:text-[#fefbf5] [&_p]:font-light">
@@ -79,24 +79,22 @@ const Contact = () => {
           </h2>
           <p>All Products</p>
           <p>Coats & Jackets</p>
-          <p>Painter&apos;s jackets</p>
+          <p>Women&apos;s jackets</p>
           <p>Sweaters</p>
           <p>Pants & Chinos</p>
-          <p>T-shirts & Polos</p>
+          <p>Dresses</p>
           <p>Suits</p>
           <p>Jeans</p>
           <p>Shorts</p>
-          <p>Accessories</p>
           <p>Gift Cards</p>
         </div>
 
         <div className="[&_p]:text-[11px] [&_p]:text-[#fefbf5] [&_p]:font-light">
           <h2 className="text-[#fefbf5] mb-1 text-base">A QUESTION?</h2>
-          <p>contact@lafaurieparis.com</p>
+          <p>contact@rayStore.com</p>
           <p>Contact Us</p>
           <p>FAQ</p>
-          <p>Make a return (USA)</p>
-          <p>Make a return (Rest of the world)</p>
+          <p>Make a return (Rwanda)</p>
         </div>
 
         <div className="[&_p]:text-[11px] [&_p]:text-[#fefbf5] [&_p]:font-light">
@@ -104,7 +102,7 @@ const Contact = () => {
           <p>Shipping / Returns</p>
           <p>Contact us on the Chat !</p>
           <p>OR</p>
-          <p>bonjour@lafaurieparis.com</p>
+          <p>rachel@rayStore.com</p>
         </div>
       </div>
 
