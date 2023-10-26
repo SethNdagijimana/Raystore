@@ -23,7 +23,7 @@ const Navbar = () => {
   }, [])
 
   return (
-    <nav>
+    <nav className="absolute top-0 w-full z-50">
       <div className="bg-[#849591] w-full flex items-center justify-center gap-5 p-2 text-white">
         <p className="text-xs font-light">Free Delivery on Orders over 300k</p>
         <p className="text-xs font-light">

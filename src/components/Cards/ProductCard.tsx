@@ -1,10 +1,11 @@
 "use client"
 
+import { cn } from "@/lib/utils"
 import Image from "next/image"
 
-type Size = "XS" | "S" | " M" | "L" | "XL" | "XXL"
+type Size = "XS" | "S" | "M" | "L" | "XL" | "XXL"
 
-// const sizes = ["XS", "S", " M", "L", "XL", "XXL"]
+const sizes = ["XS", "S", "M", "L", "XL", "XXL"]
 
 interface ProductCardProps {
   image: string
@@ -23,9 +24,11 @@ const ProductCard = ({
   availableSizes,
   price
 }: ProductCardProps) => {
+  // TODO transition scale
+
   return (
-    <div className="flex flex-col justify-between cursor-pointer relative group min-h-[700px] w-full">
-      <div className="flex-1 relative">
+    <div className="cursor-pointer relative group">
+      <div className="relative h-[500px]">
         <Image
           src={image}
           alt="image"
@@ -36,32 +39,37 @@ const ProductCard = ({
         />
       </div>
 
-      <div className=" w-full">
-        <div className="flex items-center justify-between">
-          <p className="text-[10px] font-bold font-bricolage">{name}</p>
-          <p className="text-[10px] font-bold font-bricolage">RWF{price}</p>
-        </div>
-        <p className="text-[10px] font-bold font-bricolage">{description}</p>
+      <div className="flex justify-between">
+        <div className="[&_p]:leading-4 [&_p]:font-medium">
+          <p className="text-sm font-bricolage uppercase">{name}</p>
+          <p className="text-[10px] font-bricolage">{description}</p>
 
-        {colors && colors.length > 0 && (
-          <p className="text-[10px] font-bold font-bricolage">
-            Available in {colors.length} colors
-          </p>
-        )}
+          {colors && colors.length > 0 && (
+            <p className="text-[10px] font-bricolage">
+              Available in {colors.length} colors
+            </p>
+          )}
+        </div>
+
+        <p className="text-[10px] font-bold font-bricolage">RWF{price}</p>
       </div>
 
-      <div className="gap-4 bottom-28 bg-white p-1 absolute flex items-center justify-evenly left-12 right-0 w-56 opacity-0 group-hover:opacity-100 group-transition-all duration-300 ease-in-out">
-        {/* <p className="text-sm font-medium">XS</p>
-        <p className="text-sm font-medium">S</p>
-        <p className="text-sm font-medium">M</p>
-        <p className="text-sm font-medium">L</p>
-        <p className="text-sm font-medium">XL</p>
-        <p className="text-sm font-medium">XXL</p> */}
+      <div className="gap-2 bottom-16 bg-white p-1 absolute flex items-center justify-center left-12 right-0 w-56 opacity-0 group-hover:opacity-100 group-transition-all duration-300 ease-in-out">
+        {sizes.map((size, index) => (
+          <p
+            className={cn(
+              "flex items-center justify-evenly text-sm",
+              availableSizes?.includes(size as Size)
+                ? "text-black font-light"
+                : "text-[#d2d2d2]"
+            )}
+            key={index}
+          >
+            {size}
+          </p>
+        ))}
 
-        {/* {availableSizes?.map((sizes, i))} */}
-        {/* <p className="flex items-center justify-evenly text-sm">
-          {availableSizes}
-        </p> */}
+        {/* is there any other way */}
       </div>
     </div>
   )

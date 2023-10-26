@@ -11,7 +11,7 @@ const ProductList = () => {
         description="CLAUDEL PAINTER'S JACKET"
         price={200}
         colors={["blue", "yellow"]}
-        availableSizes={["S", "XXL"]}
+        availableSizes={["XS", "S", "M", "L", "XL", "XXL"]}
       />
       <ProductCard
         image="/store2.webp"
@@ -19,7 +19,7 @@ const ProductList = () => {
         description="CLAUDEL PAINTER'S JACKET"
         price={200}
         colors={["blue", "yellow", "green"]}
-        availableSizes={["S", "XXL"]}
+        availableSizes={["S"]}
       />
       <ProductCard
         image="/store3.webp"
@@ -27,7 +27,7 @@ const ProductList = () => {
         description="CLAUDEL PAINTER'S JACKET"
         price={200}
         colors={["blue"]}
-        availableSizes={["S", "XXL"]}
+        availableSizes={["S", "M", "XL"]}
       />
       <ProductCard
         image="/store4.webp"
