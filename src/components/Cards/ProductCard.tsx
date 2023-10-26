@@ -24,7 +24,7 @@ const ProductCard = ({
   availableSizes,
   price
 }: ProductCardProps) => {
-  // TODO transition scale
+  // TODO transition scale && available colors
 
   return (
     <div className="cursor-pointer relative group">
@@ -51,7 +51,7 @@ const ProductCard = ({
           )}
         </div>
 
-        <p className="text-[10px] font-bold font-bricolage">RWF{price}</p>
+        <p className="text-[10px] font-bold font-bricolage">{price} RWF</p>
       </div>
 
       <div className="gap-2 bottom-16 bg-white p-1 absolute flex items-center justify-center left-12 right-0 w-56 opacity-0 group-hover:opacity-100 group-transition-all duration-300 ease-in-out">

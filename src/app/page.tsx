@@ -1,6 +1,6 @@
 import { ProductList } from "@/components/Cards"
 import { Collections } from "@/components/Collections"
-import { Footer } from "@/components/Footer"
+import { Contact } from "@/components/Contact"
 import { Hero } from "@/components/Hero"
 
 export default function Home() {
@@ -9,7 +9,7 @@ export default function Home() {
       <Hero />
       <ProductList />
       <Collections />
-      <Footer />
+      <Contact />
     </>
   )
 }

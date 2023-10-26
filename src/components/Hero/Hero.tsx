@@ -9,7 +9,7 @@ const Hero = () => {
             OUR PAINTER&apos;S JACKETS
           </h1>
           <p className="max-w-[400px] mx-auto text-center text-sm font-medium font-bricolage">
-            Since 1991, we&apos;ve been offering it every year in a wide range
+            Since 2016, we&apos;ve been offering it every year in a wide range
             of materials and colors. Discover the new exclusive colors of this
             Fall-Winter 2023 collection.
           </p>
