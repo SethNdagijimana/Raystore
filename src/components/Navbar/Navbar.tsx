@@ -17,8 +17,10 @@ const Navbar = () => {
     const handleScroll = () => {
       if (window.scrollY > 35) {
         setHasScrolled(true)
+        setIsMenuOpen(false)
       } else {
         setHasScrolled(false)
+        setIsMenuOpen(false)
       }
     }
 
@@ -73,9 +75,9 @@ const Navbar = () => {
         )}
 
         <ul className="hidden md:flex flex-col md:flex-row items-center justify-center md:gap-4 md:p-8 p-4">
-          <li className="cursor-pointer">Ray Store</li>
-          <li className="cursor-pointer">New Collection</li>
-          <li className="cursor-pointer">About us</li>
+          <li className="cursor-pointer font-bricolage">Ray Store</li>
+          <li className="cursor-pointer font-bricolage">New Collection</li>
+          <li className="cursor-pointer font-bricolage">About us</li>
         </ul>
 
         <div className="md:p-8 flex gap-2">
@@ -87,9 +89,9 @@ const Navbar = () => {
 
         <div className="hidden md:flex">
           <ul className="flex flex-col md:flex-row items-center justify-center md:gap-4 gap-2 p-8">
-            <li className="cursor-pointer">Login</li>
-            <li className="cursor-pointer">Help</li>
-            <li className="cursor-pointer">Cart</li>
+            <li className="cursor-pointer font-bricolage">Login</li>
+            <li className="cursor-pointer font-bricolage">Help</li>
+            <li className="cursor-pointer font-bricolage">Cart</li>
           </ul>
         </div>
       </div>
