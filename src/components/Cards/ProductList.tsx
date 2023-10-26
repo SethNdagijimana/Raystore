@@ -10,7 +10,7 @@ const ProductList = () => {
         name="Italian Moleskine - Straight cut"
         description="CLAUDEL PAINTER'S JACKET"
         price={200}
-        colors={["blue", "yellow"]}
+        colors={["blue", " yellow"]}
         availableSizes={["XS", "S", "M", "L", "XL", "XXL"]}
       />
       <ProductCard

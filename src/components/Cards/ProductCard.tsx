@@ -49,10 +49,21 @@ const ProductCard = ({
           </p>
 
           {colors && colors.length > 0 && (
-            <p className="text-[10px] font-bricolage md:group-hover:opacity-0">
+            <p className="text-[10px] font-bricolage md:group-hover:hidden">
               Available in {colors.length} colors
             </p>
           )}
+
+          <div className="flex items-center gap-2">
+            {colors &&
+              colors?.map((color, i) => (
+                <span
+                  key={i}
+                  className="rounded-full hidden w-4 h-4 bg-white  items-center justify-center group-hover:block"
+                  style={{ backgroundColor: color }}
+                ></span>
+              ))}
+          </div>
         </div>
 
         <p className="md:text-[10px] text-[8px] md:font-bold font-bricolage leading-4">
