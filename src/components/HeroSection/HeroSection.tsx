@@ -193,7 +193,7 @@ const HeroSection = () => {
       <div className="grid grid-cols-2 gap-4 border border-gray-400 border-b-transparent mt-8">
         <div className="p-8">
           <h2 className="w-[200px] mx-auto pt-8 font-bricolage text-2xl">
-            JOIN THE LAFAURIE FAMILY!
+            JOIN THE RayStore FAMILY!
           </h2>
           <p className="w-[380px] mx-auto font-light text-sm mt-6">
             Subscribe to our newsletter to receive our news and get exclusive
