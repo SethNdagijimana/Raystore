@@ -2,7 +2,7 @@ import Image from "next/image"
 
 const Hero = () => {
   return (
-    <div className="grid md:grid-cols-2 h-[800px] px-8 z-50 py-[6px] md:mt-0 mt-[110px]">
+    <section className="grid md:grid-cols-2 h-[800px] px-8 z-50 py-[6px] md:mt-0 mt-[110px]">
       <div className="flex items-center justify-center">
         <div className="text-center space-y-2 w-full">
           <h1 className="font-bricolage text-[#040404dd] font-medium">
@@ -24,7 +24,7 @@ const Hero = () => {
           style={{ objectFit: "cover" }}
         />
       </div>
-    </div>
+    </section>
   )
 }
 

@@ -58,8 +58,8 @@ const Contact = () => {
         </div>
       </div>
 
-      <div className="grid md:grid-cols-7 gap-8 md:mt-16 p-16 place-content-center">
-        <div className="hidden md:flex col-span-3">
+      <div className="grid md:grid-cols-7 gap-8 md:mt-16  place-content-center">
+        <div className="hidden md:flex col-span-3 px-16">
           <h2 className="text-white font-bricolage text-[32px]">
             SINCE 2016, RayStore IS BASED ON A SIMPLE IDEA: CREATE A WARDROBE
             THAT IS ACCESSIBLE, CHIC AND SPORTSWEAR, CASUAL AND URBAN,
