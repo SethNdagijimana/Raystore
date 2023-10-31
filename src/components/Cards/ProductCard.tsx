@@ -48,9 +48,19 @@ const ProductCard = ({
             {description}
           </p>
 
-          {colors && colors.length > 0 && (
+          {/* {colors && colors.length > 0 && (
             <p className="text-[10px] font-bricolage md:group-hover:hidden">
               Available in {colors.length} colors
+            </p>
+          )} */}
+
+          {colors && colors.length > 0 ? (
+            <p className="text-[10px] font-bricolage md:group-hover:hidden">
+              available in {colors.length} colors
+            </p>
+          ) : (
+            <p className="text-[10px] font-bricolage ">
+              available in this color only
             </p>
           )}
 

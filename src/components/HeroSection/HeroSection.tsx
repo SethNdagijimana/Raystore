@@ -1,6 +1,7 @@
 "use client"
 
 import Image from "next/image"
+import Link from "next/link"
 import { ProductCard } from "../Cards"
 import { Contact } from "../Contact"
 import { Button } from "../ui/button"
@@ -20,119 +21,89 @@ const HeroSection = () => {
       <div className="grid grid-cols-3 p-8 gap-3 ">
         <div className=" relative h-[700px]">
           <Image
-            src="/store2.webp"
+            src="/1.jpeg"
             alt="image"
             fill
             style={{ objectFit: "cover" }}
           />
-          <div className="absolute md:bottom-8 bottom-0 flex items-center justify-center left-0 right-0 p-[18px]">
-            <p className=" text-center font-bricolage text-white md:text-3xl text-xl">
-              OUR PAINTER&apos;S JACKETS
-            </p>
-          </div>
         </div>
 
         <div className=" relative  h-[700px]">
           <Image
-            src="/store1.webp"
+            src="/10.jpeg"
             alt="image"
             fill
             style={{ objectFit: "cover" }}
           />
-          <div className="absolute md:bottom-8 bottom-0 flex items-center justify-center left-0 right-0 p-[18px]">
-            <p className=" text-center font-bricolage text-white md:text-3xl text-xl">
-              OUR PAINTER&apos;S JACKETS
-            </p>
-          </div>
         </div>
 
         <div className=" relative  h-[700px]">
           <Image
-            src="/store3.webp"
+            src="/2.jpeg"
             alt="image"
             fill
             style={{ objectFit: "cover" }}
           />
-          <div className="absolute md:bottom-8 bottom-0 flex items-center justify-center left-0 right-0 p-[18px]">
-            <p className=" text-center font-bricolage text-white md:text-3xl text-xl">
-              OUR PAINTER&apos;S JACKETS
-            </p>
-          </div>
         </div>
 
         <div className=" relative  h-[700px]">
           <Image
-            src="/store4.webp"
+            src="/3.jpeg"
             alt="image"
             fill
             style={{ objectFit: "cover" }}
           />
-          <div className="absolute md:bottom-8 bottom-0 flex items-center justify-center left-0 right-0 p-[18px]">
-            <p className=" text-center font-bricolage text-white md:text-3xl text-xl">
-              OUR PAINTER&apos;S JACKETS
-            </p>
-          </div>
         </div>
 
         <div className=" relative  h-[700px]">
           <Image
-            src="/store5.webp"
+            src="/5.jpeg"
             alt="image"
             fill
             style={{ objectFit: "cover" }}
           />
-          <div className="absolute md:bottom-8 bottom-0 flex items-center justify-center left-0 right-0 p-[18px]">
-            <p className=" text-center font-bricolage text-white md:text-3xl text-xl">
-              OUR PAINTER&apos;S JACKETS
-            </p>
-          </div>
         </div>
 
         <div className=" relative  h-[700px]">
           <Image
-            src="/store6.webp"
+            src="/2.jpeg"
             alt="image"
             fill
             style={{ objectFit: "cover" }}
           />
-          <div className="absolute md:bottom-8 bottom-0 flex items-center justify-center left-0 right-0 p-[18px]">
-            <p className=" text-center font-bricolage text-white md:text-3xl text-xl">
-              OUR PAINTER&apos;S JACKETS
-            </p>
-          </div>
         </div>
 
         <div className="col-span-1 ">
           <h2 className="text-black font-bricolage text-[32px] text-center mt-56">
-            PAINTER&apos;S JACKETS
+            A Blazer JACKETS
           </h2>
           <p className="w-[400px] text-center mx-auto mt-4 font-light text-sm">
-            Available in all shapes and sizes for over 30 years, the
-            painter&apos;s jacket has become an essential part of the Lafaurie
-            wardrobe. Discover our new exclusive, modern and original colors!
+            Available in all shapes and sizes for over 7 years, the Blazer
+            jacket has become an essential part of the RayStore wardrobe.
+            Discover our new exclusive, modern and original colors!
           </p>
         </div>
 
         <ProductCard
-          image="/store1.webp"
-          name="Italian Moleskine - Straight cut"
-          description="CLAUDEL PAINTER'S JACKET"
+          image="/3.jpeg"
+          name="Two-Button - Straight short"
+          description="Blazer Jacket"
           price={200}
-          colors={["blue", " yellow"]}
-          availableSizes={["XS", "S", "M", "L", "XL", "XXL"]}
+          colors={["red", "black"]}
+          availableSizes={["M", "L", "XL", "XXL"]}
         />
         <ProductCard
-          image="/store2.webp"
-          name="Italian Moleskine - Straight cut"
-          description="CLAUDEL PAINTER'S JACKET"
-          price={200}
-          colors={["blue", " yellow", "green"]}
-          availableSizes={["XS", "S", "M", "L"]}
+          image="/5.jpeg"
+          name="Two-Button - Straight short"
+          description="Blazer Jacket"
+          price={45000}
+          colors={["black", "beige", "green"]}
+          availableSizes={["S", "M", "L", "XL", "XXL"]}
         />
 
         <div className="row-span-2 relative min-w-[300px]">
           <Image
-            src="/store6.webp"
+            src="/7.jpeg"
             alt="image"
             fill
             style={{ objectFit: "cover" }}
@@ -140,39 +111,38 @@ const HeroSection = () => {
         </div>
 
         <ProductCard
-          image="/store2.webp"
-          name="Italian Moleskine - Straight cut"
-          description="CLAUDEL PAINTER'S JACKET"
-          price={200}
-          colors={["blue", " yellow", "green"]}
-          availableSizes={[]}
+          image="/1.jpeg"
+          name="One-Button - Straight short"
+          description="Blazer Jacket"
+          price={40000}
+          availableSizes={["M", "L", "XL"]}
         />
 
         <ProductCard
-          image="/store2.webp"
-          name="Italian Moleskine - Straight cut"
-          description="CLAUDEL PAINTER'S JACKET"
-          price={200}
-          colors={["blue", " yellow", "green"]}
-          availableSizes={["XS", "S", "M", "L"]}
+          image="/2.jpeg"
+          name="One-Button - Straight short"
+          description="Blazer Jacket"
+          price={40000}
+          colors={["khaki", "beige"]}
+          availableSizes={["S", "M", "L"]}
         />
 
         <ProductCard
-          image="/store2.webp"
-          name="Italian Moleskine - Straight cut"
-          description="CLAUDEL PAINTER'S JACKET"
-          price={200}
-          colors={["blue", " yellow", "green"]}
-          availableSizes={["XS", "S", "M", "L"]}
+          image="/3.jpeg"
+          name="Two-Buttons - Straight short"
+          description="Blazer Jacket"
+          price={40000}
+          colors={["red", "black"]}
+          availableSizes={["M", "L"]}
         />
 
         <ProductCard
-          image="/store2.webp"
-          name="Italian Moleskine - Straight cut"
-          description="CLAUDEL PAINTER'S JACKET"
-          price={200}
-          colors={["blue", " yellow", "green"]}
-          availableSizes={["XS", "S", "M", "L"]}
+          image="/4.jpeg"
+          name="Two-Buttons - Long"
+          description="Blazer Jacket"
+          price={45000}
+          colors={["black", "red"]}
+          availableSizes={["XL", "L"]}
         />
       </div>
 
@@ -192,10 +162,10 @@ const HeroSection = () => {
 
       <div className="grid grid-cols-2 gap-4 border border-gray-400 border-b-transparent mt-8">
         <div className="p-8">
-          <h2 className="w-[200px] mx-auto pt-8 font-bricolage text-2xl">
+          <h2 className="w-[200px] mx-auto pt-8 font-bricolage text-2xl text-center">
             JOIN THE RayStore FAMILY!
           </h2>
-          <p className="w-[380px] mx-auto font-light text-sm mt-6">
+          <p className="w-[380px] mx-auto font-light text-sm mt-6 text-center">
             Subscribe to our newsletter to receive our news and get exclusive
             advantage
           </p>
@@ -211,7 +181,9 @@ const HeroSection = () => {
 
               <div className="rounded-[30px] text-sm absolute px-[12px] py-4 right-[10px] bottom-0 cursor-pointer transition-all duration-300 ease-in-out">
                 <Button variant={"secondary"} className="text-white">
-                  SUBMIT
+                  <a href="mailto:sethreas@gmail.com" target="_blank">
+                    Email Us
+                  </a>
                 </Button>
               </div>
             </div>
@@ -223,7 +195,15 @@ const HeroSection = () => {
             <h2 className="font-bricolage text-xl text-center">
               Our Instagram
             </h2>
-            <h2 className="font-bricolage text-sm text-center">@rayStore</h2>
+
+            <h2 className="font-bricolage text-sm text-center">
+              <Link
+                href="https://www.instagram.com/ray_style_store"
+                target="_blank"
+              >
+                @ray_style_store
+              </Link>
+            </h2>
 
             <div className=" relative h-[200px] mt-20">
               <Image
