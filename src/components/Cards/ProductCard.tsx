@@ -24,15 +24,14 @@ const ProductCard = ({
   availableSizes,
   price
 }: ProductCardProps) => {
-  // TODO transition scale && available colors
-
   return (
     <div className="cursor-pointer relative group">
-      <div className="relative md:h-[500px] h-[200px]">
+      <div className="relative md:h-[500px] h-[200px] overflow-hidden">
         <Image
           src={image}
           alt="image"
           fill
+          className="block transition-all duration-300 transform scale-100 hover:scale-110 ease-in-out"
           style={{
             objectFit: "cover"
           }}

@@ -39,7 +39,7 @@ const HeroSection = () => {
 
         <div className=" relative  h-[700px]">
           <Image
-            src="/2.jpeg"
+            src="/14.jpeg"
             alt="image"
             fill
             style={{ objectFit: "cover" }}
@@ -48,7 +48,7 @@ const HeroSection = () => {
 
         <div className=" relative  h-[700px]">
           <Image
-            src="/3.jpeg"
+            src="/11.jpeg"
             alt="image"
             fill
             style={{ objectFit: "cover" }}
@@ -57,7 +57,7 @@ const HeroSection = () => {
 
         <div className=" relative  h-[700px]">
           <Image
-            src="/5.jpeg"
+            src="/12.jpeg"
             alt="image"
             fill
             style={{ objectFit: "cover" }}
@@ -88,7 +88,7 @@ const HeroSection = () => {
           image="/3.jpeg"
           name="Two-Button - Straight short"
           description="Blazer Jacket"
-          price={200}
+          price={40000}
           colors={["red", "black"]}
           availableSizes={["M", "L", "XL", "XXL"]}
         />
@@ -148,7 +148,7 @@ const HeroSection = () => {
 
       <div className="pt-[45px]">
         <p className=" text-black font-bricolage text-8xl text-center">
-          A FAMILY STORY
+          A WOMAN STORY
         </p>
         <p className=" text-black font-bricolage text-7xl text-center">
           Since 2016

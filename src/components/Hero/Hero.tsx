@@ -6,7 +6,7 @@ const Hero = () => {
       <div className="flex items-center justify-center">
         <div className="text-center space-y-2 w-full">
           <h1 className="font-bricolage text-[#040404dd] font-medium">
-            OUR PAINTER&apos;S JACKETS
+            OUR Collections
           </h1>
           <p className="max-w-[400px] mx-auto text-center md:text-sm text-xs font-medium font-bricolage">
             Since 2016, we&apos;ve been offering it every year in a wide range
@@ -17,12 +17,7 @@ const Hero = () => {
       </div>
 
       <div className="relative md:h-full h-[600px]">
-        <Image
-          src="/hero.webp"
-          alt="image"
-          fill
-          style={{ objectFit: "cover" }}
-        />
+        <Image src="/7.jpeg" alt="image" fill style={{ objectFit: "cover" }} />
       </div>
     </section>
   )

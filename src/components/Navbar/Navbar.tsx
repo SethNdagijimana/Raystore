@@ -103,9 +103,9 @@ const Navbar = () => {
 
         <div className="hidden md:flex">
           <ul className="flex flex-col md:flex-row items-center justify-center md:gap-4 gap-2 px-4">
-            <li className="cursor-pointer font-bricolage">Login</li>
-            <li className="cursor-pointer font-bricolage">Help</li>
-            <li className="cursor-pointer font-bricolage">Cart</li>
+            <li className="cursor-pointer font-bricolage">Shorts</li>
+            <li className="cursor-pointer font-bricolage">Dresses</li>
+            <li className="cursor-pointer font-bricolage">Jackets</li>
           </ul>
         </div>
       </div>
