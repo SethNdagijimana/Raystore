@@ -10,8 +10,19 @@ const Navbar = () => {
   const [hasScrolled, setHasScrolled] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
+  const [isToggleOpen, setIsToggleOpen] = useState(false)
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
+  }
+
+  const toggle = () => {
+    setIsToggleOpen(!isToggleOpen)
+  }
+
+  const closeMenu = () => {
+    setIsMenuOpen(false)
+    setIsToggleOpen(false)
   }
 
   useEffect(() => {
@@ -19,6 +30,7 @@ const Navbar = () => {
       if (window.scrollY > 35) {
         setHasScrolled(true)
         setIsMenuOpen(false)
+        setIsToggleOpen(false)
       } else {
         setHasScrolled(false)
         setIsMenuOpen(false)
@@ -48,13 +60,14 @@ const Navbar = () => {
         )}
       >
         {/* mobile */}
-        <div className="md:hidden flex items-center justify-center p-2 transition-all duration-300 ease-in-out">
+
+        <div className="md:hidden flex items-center justify-between w-full p-2 transition-all duration-300 ease-in-out">
           <Button className="text-black" onClick={toggleMenu}>
             <span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width={32}
-                height={32}
+                width={24}
+                height={24}
                 fill="#000000"
                 viewBox="0 0 256 256"
               >
@@ -62,23 +75,67 @@ const Navbar = () => {
               </svg>
             </span>
           </Button>
+
+          <RayStore />
+
+          <Button className="text-black" onClick={toggle}>
+            <span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width={24}
+                height={24}
+                fill="#000000"
+                viewBox="0 0 256 256"
+              >
+                <path d="M216,64H176a48,48,0,0,0-96,0H40A16,16,0,0,0,24,80V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V80A16,16,0,0,0,216,64ZM128,32a32,32,0,0,1,32,32H96A32,32,0,0,1,128,32Zm88,168H40V80H80V96a8,8,0,0,0,16,0V80h64V96a8,8,0,0,0,16,0V80h40Z" />
+              </svg>
+            </span>
+          </Button>
         </div>
+
         {isMenuOpen && (
           <ul
             className={cn(
-              "flex flex-col  justify-center absolute  md:gap-4 p-8 left-20",
-              hasScrolled ? "hidden" : "top-6"
+              "bg-[#EEEEE7] top-14 rounded-[8px] absolute gap-2 p-4",
+              hasScrolled ? "transition-all duration-300 ease-in-out" : ""
             )}
+            style={{ left: isMenuOpen ? 0 : "-100%" }}
           >
-            <Link href="/">
+            <Link href="/" onClick={closeMenu}>
               <li className="cursor-pointer font-bricolage">Ray Store</li>
             </Link>
 
-            <Link href="/newCollection">
+            <Link href="/newCollection" onClick={closeMenu}>
               {" "}
               <li className="cursor-pointer font-bricolage">New Collection</li>
             </Link>
-            <li className="cursor-pointer">About us</li>
+
+            <Link href="/" onClick={closeMenu}>
+              <li className="cursor-pointer">About us</li>
+            </Link>
+          </ul>
+        )}
+
+        {isToggleOpen && (
+          <ul
+            className={cn(
+              "bg-[#EEEEE7] top-14 rounded-[8px] absolute gap-2 p-4",
+              hasScrolled ? "transition-all duration-300 ease-in-out" : ""
+            )}
+            style={{ right: isToggleOpen ? 0 : "-100%" }}
+          >
+            <Link href="/" onClick={closeMenu}>
+              <li className="cursor-pointer font-bricolage">Shorts</li>
+            </Link>
+
+            <Link href="/newCollection" onClick={closeMenu}>
+              {" "}
+              <li className="cursor-pointer font-bricolage">Dresses</li>
+            </Link>
+
+            <Link href="/" onClick={closeMenu}>
+              <li className="cursor-pointer">Jackets</li>
+            </Link>
           </ul>
         )}
 
@@ -94,8 +151,8 @@ const Navbar = () => {
           <li className="cursor-pointer font-bricolage">About us</li>
         </ul>
 
-        <div className=" flex gap-2">
-          <h2 className="hidden md:flex items-center justify-center gap-2 text-[#0b1115] font-bricolage font-semibold text-xl">
+        <div className="hidden md:flex gap-2">
+          <h2 className="hidden md:flex items-center mdjustify-center gap-2 text-[#0b1115] font-bricolage font-semibold text-xl">
             RAYSTORE
           </h2>
           <RayStore />

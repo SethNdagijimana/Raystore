@@ -2,14 +2,13 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { ProductCard } from "../Cards"
 import { Contact } from "../Contact"
 import { Button } from "../ui/button"
 
 const HeroSection = () => {
   return (
     <section>
-      <div className="h-[800px] w-full relative overflow-hidden">
+      <div className="hidden md:flex md:h-[800px] md:w-full relative overflow-hidden">
         <Image
           src="/bg.webp"
           layout="fill"
@@ -18,8 +17,8 @@ const HeroSection = () => {
         />
       </div>
 
-      <div className="grid grid-cols-3 p-8 gap-3 ">
-        <div className=" relative h-[700px]">
+      <div className="grid md:grid-cols-3 md:p-8 md:gap-3 grid-cols-2 p-4 gap-2 ">
+        <div className=" relative md:h-[700px] h-[300px] md:w-full">
           <Image
             src="/1.jpeg"
             alt="image"
@@ -28,7 +27,7 @@ const HeroSection = () => {
           />
         </div>
 
-        <div className=" relative  h-[700px]">
+        <div className="relative md:h-[700px] h-[300px]">
           <Image
             src="/10.jpeg"
             alt="image"
@@ -37,7 +36,7 @@ const HeroSection = () => {
           />
         </div>
 
-        <div className=" relative  h-[700px]">
+        <div className="relative md:h-[700px] h-[300px]">
           <Image
             src="/14.jpeg"
             alt="image"
@@ -46,7 +45,7 @@ const HeroSection = () => {
           />
         </div>
 
-        <div className=" relative  h-[700px]">
+        <div className="relative md:h-[700px] h-[300px]">
           <Image
             src="/11.jpeg"
             alt="image"
@@ -55,7 +54,7 @@ const HeroSection = () => {
           />
         </div>
 
-        <div className=" relative  h-[700px]">
+        <div className=" relative md:h-[700px] h-[300px]">
           <Image
             src="/12.jpeg"
             alt="image"
@@ -64,7 +63,7 @@ const HeroSection = () => {
           />
         </div>
 
-        <div className=" relative  h-[700px]">
+        <div className="relative md:h-[700px] h-[300px]">
           <Image
             src="/2.jpeg"
             alt="image"
@@ -72,36 +71,43 @@ const HeroSection = () => {
             style={{ objectFit: "cover" }}
           />
         </div>
+      </div>
 
-        <div className="col-span-1 ">
-          <h2 className="text-black font-bricolage text-[32px] text-center mt-56">
+      {/* <div>
+      <div className="md:col-span-1 col-span-3">
+          <h2 className="text-black font-bricolage text-[32px] text-center md:mt-56 mt-20">
             A Blazer JACKETS
           </h2>
-          <p className="w-[400px] text-center mx-auto mt-4 font-light text-sm">
+          <p className="md:w-[400px] w-[200px] text-center mx-auto md:mt-4 mt-2 font-light md:text-sm text-sm">
             Available in all shapes and sizes for over 7 years, the Blazer
             jacket has become an essential part of the RayStore wardrobe.
             Discover our new exclusive, modern and original colors!
           </p>
         </div>
 
-        <ProductCard
-          image="/3.jpeg"
-          name="Two-Button - Straight short"
-          description="Blazer Jacket"
-          price={40000}
-          colors={["red", "black"]}
-          availableSizes={["M", "L", "XL", "XXL"]}
-        />
-        <ProductCard
-          image="/5.jpeg"
-          name="Two-Button - Straight short"
-          description="Blazer Jacket"
-          price={45000}
-          colors={["black", "beige", "green"]}
-          availableSizes={["S", "M", "L", "XL", "XXL"]}
-        />
+        <div className=" relative md:h-[600px] h-[300px]">
+          <ProductCard
+            image="/3.jpeg"
+            name="Two-Button - Straight short"
+            description="Blazer Jacket"
+            price={40000}
+            colors={["red", "black"]}
+            availableSizes={["M", "L", "XL", "XXL"]}
+          />
+        </div>
 
-        <div className="row-span-2 relative min-w-[300px]">
+        <div className="relative md:h-[600px] h-[300px]">
+          <ProductCard
+            image="/5.jpeg"
+            name="Two-Button - Straight short"
+            description="Blazer Jacket"
+            price={45000}
+            colors={["black", "beige", "green"]}
+            availableSizes={["S", "M", "L", "XL", "XXL"]}
+          />
+        </div>
+
+        <div className="md:row-span-2  relative min-w-[300px]">
           <Image
             src="/7.jpeg"
             alt="image"
@@ -110,76 +116,86 @@ const HeroSection = () => {
           />
         </div>
 
-        <ProductCard
-          image="/1.jpeg"
-          name="One-Button - Straight short"
-          description="Blazer Jacket"
-          price={40000}
-          availableSizes={["M", "L", "XL"]}
-        />
+        <div>
+          <ProductCard
+            image="/1.jpeg"
+            name="One-Button - Straight short"
+            description="Blazer Jacket"
+            price={40000}
+            availableSizes={["M", "L", "XL"]}
+          />
+        </div>
 
-        <ProductCard
-          image="/2.jpeg"
-          name="One-Button - Straight short"
-          description="Blazer Jacket"
-          price={40000}
-          colors={["khaki", "beige"]}
-          availableSizes={["S", "M", "L"]}
-        />
+        <div>
+          <ProductCard
+            image="/2.jpeg"
+            name="One-Button - Straight short"
+            description="Blazer Jacket"
+            price={40000}
+            colors={["khaki", "beige"]}
+            availableSizes={["S", "M", "L"]}
+          />
+        </div>
 
-        <ProductCard
-          image="/3.jpeg"
-          name="Two-Buttons - Straight short"
-          description="Blazer Jacket"
-          price={40000}
-          colors={["red", "black"]}
-          availableSizes={["M", "L"]}
-        />
+        <div>
+          <ProductCard
+            image="/3.jpeg"
+            name="Two-Buttons - Straight short"
+            description="Blazer Jacket"
+            price={40000}
+            colors={["red", "black"]}
+            availableSizes={["M", "L"]}
+          />
+        </div>
 
-        <ProductCard
-          image="/4.jpeg"
-          name="Two-Buttons - Long"
-          description="Blazer Jacket"
-          price={45000}
-          colors={["black", "red"]}
-          availableSizes={["XL", "L"]}
-        />
-      </div>
+        <div>
+          {" "}
+          <ProductCard
+            image="/4.jpeg"
+            name="Two-Buttons - Long"
+            description="Blazer Jacket"
+            price={45000}
+            colors={["black", "red"]}
+            availableSizes={["XL", "L"]}
+          />
+        </div>
+      </div> */}
 
-      <div className="pt-[45px]">
-        <p className=" text-black font-bricolage text-8xl text-center">
+      <div className="md:pt-[45px]">
+        <p className="text-black font-bricolage md:text-8xl text-4xl text-center">
           A WOMAN STORY
         </p>
-        <p className=" text-black font-bricolage text-7xl text-center">
+        <p className=" text-black font-bricolage md:text-7xl text-3xl text-center">
           Since 2016
         </p>
 
-        <p className="text-center w-[530px] mx-auto mt-3 font-light text-sm font-bricolage">
+        <p className="text-center md:w-[530px] w-[250px] mx-auto mt-3 font-light text-sm font-bricolage">
           Founded in Kigali in 2016, RayStore dresses independent Women with
           casual elegance
         </p>
       </div>
 
-      <div className="grid grid-cols-2 gap-4 border border-gray-400 border-b-transparent mt-8">
-        <div className="p-8">
-          <h2 className="w-[200px] mx-auto pt-8 font-bricolage text-2xl text-center">
+      <div className="grid md:grid-cols-2 grid-cols-1 md:gap-4 gap-2 border border-gray-400 border-b-transparent mt-8">
+        <div className="md:p-8 p-4">
+          <h2 className="w-[200px] mx-auto md:pt-8 pt-4 font-bricolage md:text-2xl text-xl text-center">
             JOIN THE RayStore FAMILY!
           </h2>
-          <p className="w-[380px] mx-auto font-light text-sm mt-6 text-center">
+
+          <p className="md:w-[380px] w-[200px] mx-auto font-light md:text-sm text-xs mt-6 text-center">
             Subscribe to our newsletter to receive our news and get exclusive
             advantage
           </p>
 
-          <div className="relative w-[400px] h-[270px] mx-auto mt-[40px]">
-            <div className="-left-[30px] -right-[30px] h-[200px] p-[30px]  absolute">
+          <div className="relative md:w-[400px] md:h-[270px] h-[180px] mx-auto md:mt-[40px] mt-5">
+            <div className="md:-left-[30px] left-[15px] md:-right-[30px] right-[15px] md:h-[200px] h-[150px] md:p-[30px] p-[15px] absolute">
               <input
                 type="email"
                 name="email"
                 placeholder="Your email"
-                className="outline-none p-[10px] w-[65%] border border-transparent border-b-[#6b696d5c] bg-transparent absolute bottom-[30px] "
+                className="outline-none p-[10px] md:w-[65%] w-[40%] border border-transparent border-b-[#6b696d5c] bg-transparent absolute bottom-[30px] "
               />
 
-              <div className="rounded-[30px] text-sm absolute px-[12px] py-4 right-[10px] bottom-0 cursor-pointer transition-all duration-300 ease-in-out">
+              <div className="md:rounded-[30px] rounded-[15px] text-sm absolute md:px-3 px-[6px] md:py-4 py-2 md:right-[10px] right-16 bottom-0 cursor-pointer transition-all duration-300 ease-in-out">
                 <Button variant={"secondary"} className="text-white">
                   <a href="mailto:sethreas@gmail.com" target="_blank">
                     Email Us
@@ -190,9 +206,9 @@ const HeroSection = () => {
           </div>
         </div>
 
-        <div className="p-8 border-x border-gray-400 border-b-transparent grid grid-cols-2">
-          <div className="row-span-2 mt-8 p-8">
-            <h2 className="font-bricolage text-xl text-center">
+        <div className="md:p-8 p-4 md:border-x border-y border-gray-400 border-b-transparent grid grid-cols-2">
+          <div className="row-span-2 md:mt-8 mt-6 md:p-8 p-6">
+            <h2 className="font-bricolage md:text-xl text-lg text-center">
               Our Instagram
             </h2>
 
@@ -205,7 +221,7 @@ const HeroSection = () => {
               </Link>
             </h2>
 
-            <div className=" relative h-[200px] mt-20">
+            <div className="relative h-[200px] md:w-[300px] w-[150px] col-span-2 md:mt-20 mt-14">
               <Image
                 src="/store11.webp"
                 alt="image"
@@ -215,7 +231,7 @@ const HeroSection = () => {
             </div>
           </div>
 
-          <div className=" relative  h-[400px]">
+          <div className="relative md:h-[400px] h-[200px] md:top-0 top-[90px]">
             <Image
               src="/store11.webp"
               alt="image"
@@ -226,7 +242,7 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <div className="mt-2">
+      <div className="md:mt-2 mt-1">
         <Contact />
       </div>
     </section>
