@@ -2,6 +2,7 @@
 
 import Image from "next/image"
 import Link from "next/link"
+import { ProductCard } from "../Cards"
 import { Contact } from "../Contact"
 import { Button } from "../ui/button"
 
@@ -73,11 +74,12 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* <div>
-      <div className="md:col-span-1 col-span-3">
+      <div className="hidden md:grid grid-cols-3 p-8 gap-2">
+        <div>
           <h2 className="text-black font-bricolage text-[32px] text-center md:mt-56 mt-20">
             A Blazer JACKETS
           </h2>
+
           <p className="md:w-[400px] w-[200px] text-center mx-auto md:mt-4 mt-2 font-light md:text-sm text-sm">
             Available in all shapes and sizes for over 7 years, the Blazer
             jacket has become an essential part of the RayStore wardrobe.
@@ -85,29 +87,25 @@ const HeroSection = () => {
           </p>
         </div>
 
-        <div className=" relative md:h-[600px] h-[300px]">
-          <ProductCard
-            image="/3.jpeg"
-            name="Two-Button - Straight short"
-            description="Blazer Jacket"
-            price={40000}
-            colors={["red", "black"]}
-            availableSizes={["M", "L", "XL", "XXL"]}
-          />
-        </div>
+        <ProductCard
+          image="/15.jpeg"
+          name="One-Button - Straight Long"
+          description="Blazer JACKETS"
+          price={40000}
+          colors={["pink", "white"]}
+          availableSizes={["M", "L", "XXL"]}
+        />
 
-        <div className="relative md:h-[600px] h-[300px]">
-          <ProductCard
-            image="/5.jpeg"
-            name="Two-Button - Straight short"
-            description="Blazer Jacket"
-            price={45000}
-            colors={["black", "beige", "green"]}
-            availableSizes={["S", "M", "L", "XL", "XXL"]}
-          />
-        </div>
+        <ProductCard
+          image="/4.jpeg"
+          name="Two-Buttons - Long"
+          description="Blazer Jacket"
+          price={45000}
+          colors={["black", "red"]}
+          availableSizes={["XL", "L"]}
+        />
 
-        <div className="md:row-span-2  relative min-w-[300px]">
+        <div className="relative">
           <Image
             src="/7.jpeg"
             alt="image"
@@ -116,50 +114,23 @@ const HeroSection = () => {
           />
         </div>
 
-        <div>
-          <ProductCard
-            image="/1.jpeg"
-            name="One-Button - Straight short"
-            description="Blazer Jacket"
-            price={40000}
-            availableSizes={["M", "L", "XL"]}
-          />
-        </div>
+        <ProductCard
+          image="/17.jpeg"
+          name="Straight cut"
+          description="JACKETS"
+          price={15000}
+          availableSizes={["XL", "XXL"]}
+        />
 
-        <div>
-          <ProductCard
-            image="/2.jpeg"
-            name="One-Button - Straight short"
-            description="Blazer Jacket"
-            price={40000}
-            colors={["khaki", "beige"]}
-            availableSizes={["S", "M", "L"]}
-          />
-        </div>
-
-        <div>
-          <ProductCard
-            image="/3.jpeg"
-            name="Two-Buttons - Straight short"
-            description="Blazer Jacket"
-            price={40000}
-            colors={["red", "black"]}
-            availableSizes={["M", "L"]}
-          />
-        </div>
-
-        <div>
-          {" "}
-          <ProductCard
-            image="/4.jpeg"
-            name="Two-Buttons - Long"
-            description="Blazer Jacket"
-            price={45000}
-            colors={["black", "red"]}
-            availableSizes={["XL", "L"]}
-          />
-        </div>
-      </div> */}
+        <ProductCard
+          image="/12.jpeg"
+          name="double-breasted"
+          description="Blazer JACKETS"
+          price={40000}
+          colors={["beige", "grey", "black", "red"]}
+          availableSizes={["M", "L", "XL", "XXL"]}
+        />
+      </div>
 
       <div className="md:pt-[45px]">
         <p className="text-black font-bricolage md:text-8xl text-4xl text-center">
