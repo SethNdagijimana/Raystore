@@ -5,12 +5,12 @@ import { Hero } from "@/components/Hero"
 
 const NewCollection = () => {
   return (
-    <>
+    <div>
       <Hero />
       <ProductList />
       <Collections />
       <Contact />
-    </>
+    </div>
   )
 }
 

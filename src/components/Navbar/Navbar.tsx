@@ -1,5 +1,6 @@
 "use client"
 
+import { Sheet, SheetContent } from "@/components/ui/sheet"
 import { cn } from "@/lib/utils"
 import Link from "next/link"
 import { useEffect, useState } from "react"
@@ -9,11 +10,31 @@ import { Button } from "../ui/button"
 const Navbar = () => {
   const [hasScrolled, setHasScrolled] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isLoading, setisLoading] = useState<boolean>(false)
 
   const [isToggleOpen, setIsToggleOpen] = useState(false)
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
+  }
+
+  const handleSheetOpenChange = (open: boolean) => {
+    if (isLoading) return null
+
+    if (!open) {
+      setIsMenuOpen(!isMenuOpen)
+    }
+
+    setIsMenuOpen(!isMenuOpen)
+  }
+
+  const handleToggleOpen = (open: boolean) => {
+    if (isLoading) return null
+
+    if (!open) {
+      setIsToggleOpen(!isToggleOpen)
+    }
+    setIsToggleOpen(!isToggleOpen)
   }
 
   const toggle = () => {
@@ -55,7 +76,7 @@ const Navbar = () => {
 
       <div
         className={cn(
-          "px-4 w-full flex items-center md:justify-between justify-center bg-[#EEEEE7]  text-black z-50",
+          "px-4 w-full flex items-center md:justify-between justify-center bg-[#EEEEE7] text-black z-50",
           hasScrolled ? "fixed top-0 " : "text-[#000000]"
         )}
       >
@@ -93,51 +114,70 @@ const Navbar = () => {
           </Button>
         </div>
 
-        {isMenuOpen && (
-          <ul
-            className={cn(
-              "bg-[#EEEEE7] top-14 rounded-[8px] absolute gap-2 p-4",
-              hasScrolled ? "transition-all duration-300 ease-in-out" : ""
-            )}
-            style={{ left: isMenuOpen ? 0 : "-100%" }}
+        <Sheet
+          open={isMenuOpen}
+          onOpenChange={(open) => {
+            handleSheetOpenChange(open)
+          }}
+        >
+          <SheetContent
+            className="overflow-y-auto h-[400px] w-[200px] sm:w-[540px] bg-white/80"
+            side={"left"}
           >
-            <Link href="/" onClick={closeMenu}>
-              <li className="cursor-pointer font-bricolage">Ray Store</li>
-            </Link>
+            <ul
+              className={cn(
+                "bg-transparent top-14 rounded-[8px] absolute gap-2 p-4",
+                hasScrolled ? "transition-all duration-300 ease-in-out" : ""
+              )}
+              style={{ left: isMenuOpen ? 0 : "-100%" }}
+            >
+              <Link href="/" onClick={closeMenu}>
+                <li className="cursor-pointer font-bricolage">Ray Store</li>
+              </Link>
 
-            <Link href="/newCollection" onClick={closeMenu}>
-              {" "}
-              <li className="cursor-pointer font-bricolage">New Collection</li>
-            </Link>
+              <Link href="/newCollection" onClick={closeMenu}>
+                {" "}
+                <li className="cursor-pointer font-bricolage">
+                  New Collection
+                </li>
+              </Link>
 
-            <Link href="/" onClick={closeMenu}>
-              <li className="cursor-pointer">About us</li>
-            </Link>
-          </ul>
-        )}
+              <Link href="/" onClick={closeMenu}>
+                <li className="cursor-pointer">About us</li>
+              </Link>
+            </ul>
+          </SheetContent>
+        </Sheet>
 
-        {isToggleOpen && (
-          <ul
-            className={cn(
-              "bg-[#EEEEE7] top-14 rounded-[8px] absolute gap-2 p-4",
-              hasScrolled ? "transition-all duration-300 ease-in-out" : ""
-            )}
-            style={{ right: isToggleOpen ? 0 : "-100%" }}
+        <Sheet
+          open={isToggleOpen}
+          onOpenChange={(open) => handleToggleOpen(open)}
+        >
+          <SheetContent
+            className="overflow-y-auto h-[400px] w-[200px] sm:w-[540px] bg-white/80"
+            side={"right"}
           >
-            <Link href="/" onClick={closeMenu}>
-              <li className="cursor-pointer font-bricolage">Shorts</li>
-            </Link>
+            <ul
+              className={cn(
+                "top-14 absolute  gap-2 p-4",
+                hasScrolled ? "transition-all duration-300 ease-in-out" : ""
+              )}
+              style={{ left: isToggleOpen ? 0 : "-100%" }}
+            >
+              <Link href="/shorts" onClick={closeMenu}>
+                <li className="cursor-pointer font-bricolage">Shorts</li>
+              </Link>
 
-            <Link href="/newCollection" onClick={closeMenu}>
-              {" "}
-              <li className="cursor-pointer font-bricolage">Dresses</li>
-            </Link>
+              <Link href="/dresses" onClick={closeMenu}>
+                <li className="cursor-pointer font-bricolage">Dresses</li>
+              </Link>
 
-            <Link href="/" onClick={closeMenu}>
-              <li className="cursor-pointer">Jackets</li>
-            </Link>
-          </ul>
-        )}
+              <Link href="/jackets" onClick={closeMenu}>
+                <li className="cursor-pointer">Jackets</li>
+              </Link>
+            </ul>
+          </SheetContent>
+        </Sheet>
 
         <ul className="hidden md:flex flex-col md:flex-row items-center justify-center md:gap-4 md:px-4 p-2">
           <Link href="/">
@@ -145,14 +185,13 @@ const Navbar = () => {
           </Link>
 
           <Link href="/newCollection">
-            {" "}
             <li className="cursor-pointer font-bricolage">New Collection</li>
           </Link>
           <li className="cursor-pointer font-bricolage">About us</li>
         </ul>
 
         <div className="hidden md:flex gap-2">
-          <h2 className="hidden md:flex items-center mdjustify-center gap-2 text-[#0b1115] font-bricolage font-semibold text-xl">
+          <h2 className="hidden md:flex items-center justify-center gap-2 text-[#0b1115] font-bricolage font-semibold text-xl">
             RAYSTORE
           </h2>
           <RayStore />
@@ -160,9 +199,17 @@ const Navbar = () => {
 
         <div className="hidden md:flex">
           <ul className="flex flex-col md:flex-row items-center justify-center md:gap-4 gap-2 px-4">
-            <li className="cursor-pointer font-bricolage">Shorts</li>
-            <li className="cursor-pointer font-bricolage">Dresses</li>
-            <li className="cursor-pointer font-bricolage">Jackets</li>
+            <Link href="/shorts">
+              <li className="cursor-pointer font-bricolage">Shorts</li>
+            </Link>
+
+            <Link href="/dresses">
+              <li className="cursor-pointer font-bricolage">Dresses</li>
+            </Link>
+
+            <Link href="jackets">
+              <li className="cursor-pointer font-bricolage">Jackets</li>
+            </Link>
           </ul>
         </div>
       </div>
