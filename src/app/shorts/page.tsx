@@ -10,7 +10,7 @@ const Shorts = () => {
         initial={{ opacity: 0, translateY: 0 }}
         animate={{ opacity: 1, translateY: 50 }}
         transition={{ ease: "easeInOut", duration: 1 }}
-        className="mt-28 w-[500px] mx-auto text-center "
+        className="md:mt-28 mt-14 md:w-[500px] w-[250px] mx-auto text-center "
       >
         <h1>Coming Soon</h1>
         <p>In the meanTime Explore our New Collections</p>
