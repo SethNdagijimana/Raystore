@@ -2,6 +2,7 @@
 
 import { Sheet, SheetContent } from "@/components/ui/sheet"
 import { cn } from "@/lib/utils"
+import { motion } from "framer-motion"
 import Link from "next/link"
 import { useEffect, useState } from "react"
 import { RayStore } from "../icon"
@@ -68,10 +69,22 @@ const Navbar = () => {
   return (
     <nav className="absolute top-0 w-full z-50">
       <div className="hidden bg-[#849591] w-full md:flex md:items-center md:justify-center md:gap-5 p-1 text-white">
-        <p className="text-xs font-light">Free Delivery on Orders over 300k</p>
-        <p className="text-xs font-light">
+        <motion.p
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ ease: "easeInOut", duration: 1 }}
+          className="text-xs font-light"
+        >
+          Free Delivery on Orders over 300k
+        </motion.p>
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ ease: "easeInOut", duration: 3 }}
+          className="text-xs font-light"
+        >
           CLick & Collect in less than 2 hours
-        </p>
+        </motion.p>
       </div>
 
       <div

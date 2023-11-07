@@ -32,7 +32,7 @@ export default function Home() {
 
         <div className="relative md:h-[700px] h-[300px]">
           <Image
-            src="/10.jpeg"
+            src="/s2.jpeg"
             alt="image"
             fill
             style={{ objectFit: "cover" }}
@@ -221,7 +221,7 @@ export default function Home() {
 
           <div className="relative md:h-[400px] h-[200px] md:top-0 top-[90px]">
             <Image
-              src="/4.jpeg"
+              src="/s10.jpeg"
               alt="image"
               fill
               style={{ objectFit: "cover" }}
