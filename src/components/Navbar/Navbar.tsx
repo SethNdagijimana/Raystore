@@ -68,12 +68,12 @@ const Navbar = () => {
 
   return (
     <nav className="absolute top-0 w-full z-50">
-      <div className="hidden bg-[#849591] w-full md:flex md:items-center md:justify-center md:gap-5 p-1 text-white">
+      <div className="bg-[#849591] w-full flex items-center justify-center md:gap-5 p-1 gap-3 text-white">
         <motion.p
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ ease: "easeInOut", duration: 1 }}
-          className="text-xs font-light"
+          className="md:text-base text-[10px] font-light"
         >
           Free Delivery on Orders over 300k
         </motion.p>
@@ -81,7 +81,7 @@ const Navbar = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ ease: "easeInOut", duration: 3 }}
-          className="text-xs font-light"
+          className="md:text-base text-[10px] font-light"
         >
           CLick & Collect in less than 2 hours
         </motion.p>

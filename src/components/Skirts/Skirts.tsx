@@ -4,7 +4,7 @@ import { ProductCard } from "../Cards"
 
 const Skirts = () => {
   return (
-    <div className="grid grid-cols-4 mt-20 gap-4">
+    <div className="grid md:grid-cols-4 grid-cols-2 md:mt-20 mt-16 gap-4">
       <ProductCard
         image="/11.jpeg"
         name="saree"

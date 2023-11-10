@@ -54,16 +54,16 @@ const ProductCard = ({
           )} */}
 
           {colors && colors.length > 0 ? (
-            <p className="text-[10px] font-bricolage md:group-hover:hidden">
+            <p className="md:text-[10px] text-[8px] font-bricolage group-hover:hidden">
               available in {colors.length} colors
             </p>
           ) : (
-            <p className="text-[10px] font-bricolage ">
+            <p className="md:text-[10px] text-[8px] font-bricolage ">
               available in this color only
             </p>
           )}
 
-          <div className="flex items-center gap-2">
+          <div className="flex gap-2">
             {colors &&
               colors?.map((color, i) => (
                 <span
