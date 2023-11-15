@@ -60,7 +60,7 @@ const Contact = () => {
 
       <div className="grid md:grid-cols-7 gap-8 md:mt-16  place-content-center">
         <div className="hidden md:flex col-span-3 px-16">
-          <h2 className="text-white font-bricolage text-[32px]">
+          <h2 className="text-white font-bricolage text-3xl leading-10">
             SINCE 2016, RayStore IS BASED ON A SIMPLE IDEA: CREATE A WARDROBE
             THAT IS ACCESSIBLE, CHIC AND SPORTSWEAR, CASUAL AND URBAN,
             TRANSGENERATIONAL... TO ACCOMPANY Women IN THEIR DAILY LIVES
@@ -84,7 +84,7 @@ const Contact = () => {
           </h2>
           <p>All Products</p>
           <p>Coats & Jackets</p>
-          <p>Women&apos;s jackets</p>
+          <p>Blazers</p>
           <p>Sweaters</p>
           <p>Pants & Chinos</p>
           <p>Dresses</p>
@@ -98,7 +98,7 @@ const Contact = () => {
           <h2 className="text-[#fefbf5] mb-1 md:text-base text-sm">
             A QUESTION?
           </h2>
-          <p>contact@rayStore.com</p>
+          <p>+250 788 361 245</p>
           <p>Contact Us</p>
           <p>FAQ</p>
           <p>Make a return (Rwanda)</p>
@@ -109,9 +109,9 @@ const Contact = () => {
             SHIPPING & RETURNS
           </h2>
           <p>Shipping / Returns</p>
-          <p>Contact us on the Chat !</p>
+          <p>Contact us on Whatsapp!</p>
           <p>OR</p>
-          <p>rachel@rayStore.com</p>
+          <p>sethreas@gmail.com</p>
         </div>
       </div>
 
