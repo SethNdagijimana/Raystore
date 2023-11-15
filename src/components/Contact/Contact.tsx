@@ -63,7 +63,8 @@ const Contact = () => {
           <h2 className="text-white font-bricolage text-3xl leading-10">
             SINCE 2016, RayStore IS BASED ON A SIMPLE IDEA: CREATE A WARDROBE
             THAT IS ACCESSIBLE, CHIC AND SPORTSWEAR, CASUAL AND URBAN,
-            TRANSGENERATIONAL... TO ACCOMPANY Women IN THEIR DAILY LIVES
+            TRANSGENERATIONAL... TO ACCOMPANY Women IN THEIR DAILY LIVES for
+            booking please contact us on Whatsapp or Email us
           </h2>
         </div>
 
@@ -100,6 +101,7 @@ const Contact = () => {
           </h2>
           <p>+250 788 361 245</p>
           <p>Contact Us</p>
+          <p>For Booking please contact us on Whatsapp</p>
           <p>FAQ</p>
           <p>Make a return (Rwanda)</p>
         </div>
