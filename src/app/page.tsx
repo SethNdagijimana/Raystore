@@ -19,7 +19,7 @@ export default function Home() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ ease: "easeInOut", duration: 2 }}
-        className="grid md:grid-cols-3 md:p-8 md:gap-3 grid-cols-2 p-4 gap-2 "
+        className="grid md:grid-cols-3 md:p-8 md:gap-3 grid-cols-2 p-4 gap-2 mt-24 md:mt-0"
       >
         <div className=" relative md:h-[700px] h-[300px] md:w-full">
           <Image
